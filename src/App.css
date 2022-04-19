@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+:root {
+    --font: Ubuntu, sans-serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row {
+    display: flex;
+    align-items: center;
+    /*
+    border-color: aqua;
+    border-style: solid;
+    */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right {
+    display: inline-block;
+    align-items: center;
+    border-radius: 1.8vh;
+    /*border-style: dashed;*/
+    padding-right: 3.6vh;;
+    margin-left: auto;
+    margin-right: 0;
+
+    color: white;
+    font-size: 5.2vh;
+    line-height: 0%;
+    font-family: var(--font);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left {
+    display: inline-block;
+    /*border-style: dashed;*/
+    padding-left: 3.6vh;
+
+    color: white;
+    line-height: 0%;
+    font-family: var(--font);
 }
 
-.App-link {
-  color: #61dafb;
+.big {
+    font-size: 5.4vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.small {
+    font-size: 5.2vh;
+}
+
+.wristband {
+    border-radius: 3.6vh;
+    background-color: rgb(255, 234, 2);
+}
+
+.green {
+    background-color: rgb(84, 206, 51);
+}
+.blue {
+    background-color: rgb(88, 158, 251);
+}
+.pink {
+    background-color: rgb(240, 137, 191);
+}
+.yellow {
+    background-color: yellow;
+}
+.white {
+    background-color: white;
+}
+.white_text {
+    color: white;
+}
+.black_text {
+    color: black;
+}
+
+.parent {
+    position: absolute;
+    display: grid;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    padding: 1.8vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 1.8vh;
+    background-color: rgb(40, 40, 40);
 }
