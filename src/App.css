@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
 :root {
-    --font: Ubuntu, sans-serif
+    --font: Ubuntu, sans-serif;
+    --header_font: 5.4vh;
+    --gap_unit: 1.8vh;
+    --color_name_font: 5.2vh;
 }
 
 .row {
     display: flex;
     align-items: center;
-    /*
-    border-color: aqua;
-    border-style: solid;
-    */
+    /*border-color: aqua;
+    border-style: solid;*/
 }
 
 .right {
     display: inline-block;
     align-items: center;
-    border-radius: 1.8vh;
+    border-radius: var(--gap_unit);
     /*border-style: dashed;*/
-    padding-right: 3.6vh;;
+    padding-right: calc(2*var(--gap_unit));;
     margin-left: auto;
     margin-right: 0;
 
     color: white;
-    font-size: 5.2vh;
     line-height: 0%;
     font-family: var(--font);
 }
@@ -31,23 +31,23 @@
 .left {
     display: inline-block;
     /*border-style: dashed;*/
-    padding-left: 3.6vh;
+    padding-left: calc(2*var(--gap_unit));
 
     color: white;
     line-height: 0%;
     font-family: var(--font);
 }
 
-.big {
-    font-size: 5.4vh;
+.header_font {
+    font-size: var(--header_font);
 }
 
-.small {
-    font-size: 5.2vh;
+.color_name_font {
+    font-size: var(--color_name_font);
 }
 
 .wristband {
-    border-radius: 3.6vh;
+    border-radius: calc(2*var(--gap_unit));
     background-color: rgb(255, 234, 2);
 }
 
@@ -66,9 +66,7 @@
 .white {
     background-color: white;
 }
-.white_text {
-    color: white;
-}
+
 .black_text {
     color: black;
 }
@@ -81,9 +79,9 @@
     right: 0px;
     bottom: 0px;
 
-    padding: 1.8vh;
+    padding: var(--gap_unit);
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
-    row-gap: 1.8vh;
+    row-gap: var(--gap_unit);
     background-color: rgb(40, 40, 40);
 }

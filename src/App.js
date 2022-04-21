@@ -12,7 +12,7 @@ const Firstrow = ({ heading, time }) => {
 
 const Header = ({ heading }) => {
   return (
-    <div className="right">
+    <div className="right header_font">
       <h1>{heading}</h1>
     </div>
   )
@@ -20,41 +20,33 @@ const Header = ({ heading }) => {
 
 const Clock = ({ time }) => {
   return (
-    <div className="left big">
+    <div className="left header_font">
       <h1>{time}</h1>
     </div>
   )
 }
 
-const Wristband = ({ color, countdown, expire=false }) => {
-
+const Wristband = ({ color, countdown }) => {
   return (
     <div className={`row wristband ${color}`}>
       <Color color={color}></Color>
-      <Countdown countdown={countdown} color={color} expire={expire}></Countdown>
+      <Countdown countdown={countdown}></Countdown>
     </div>
   )
 }
 
 const Color = ({ color }) => {
-  const textColor = (color === "")
-    ? "white_text"
-    : "black_text"
 
   return (
-    <div className={`left small ${textColor}`}>
+    <div className={`left black_text color_name_font`}>
       <h2>{color.toUpperCase()}</h2>
     </div>
   )
 }
 
-const Countdown = ({ countdown, color }) => {
-  const textColor = (color === "")
-    ? "white_text"
-    : "black_text"
-  
+const Countdown = ({ countdown }) => {
   return (
-    <div className={`right ${textColor}`}>
+    <div className={`right black_text header_font`}>
       <h1>{countdown}</h1>
     </div>
   )
@@ -64,7 +56,7 @@ const App = () => {
   const localTime = () => {
     let t = new Date()
     if (false) {
-      let h = 0
+      let h = 3
       let m = 0
       let s = 0
       t.setHours(t.getHours()+h, t.getMinutes()+m, t.getSeconds()+s)
@@ -152,7 +144,7 @@ const App = () => {
       <Wristband color={stack[1]} countdown={timeLeft(2)}></Wristband>
       <Wristband color={stack[2]} countdown={timeLeft(1)}></Wristband>
       <Wristband color={stack[3]} countdown={timeLeft(0)}></Wristband>
-      <Wristband color={stack[4]} countdown="00:00:00"></Wristband>
+      <Wristband color={stack[4]} countdown="EXPIRED"></Wristband>
     </div>
   )
 }
