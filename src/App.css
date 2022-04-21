@@ -5,6 +5,8 @@
     --header_font: 5.4vh;
     --gap_unit: 1.8vh;
     --color_name_font: 5.2vh;
+    --thick_font: 7.2vh;
+    --thin_font: 3.6vh;
 }
 
 .row {
@@ -32,7 +34,6 @@
     display: inline-block;
     /*border-style: dashed;*/
     padding-left: calc(2*var(--gap_unit));
-
     color: white;
     line-height: 0%;
     font-family: var(--font);
@@ -46,9 +47,18 @@
     font-size: var(--color_name_font);
 }
 
+.thick_font {
+    font-size: var(--thick_font);
+}
+
+.thin_font {
+    font-size: var(--thin_font);
+}
+
 .wristband {
     border-radius: calc(2*var(--gap_unit));
     background-color: rgb(255, 234, 2);
+    margin-left: 0vw;
 }
 
 .green {
@@ -81,7 +91,7 @@
 
     padding: var(--gap_unit);
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 6fr) 8fr 4fr;
     row-gap: var(--gap_unit);
     background-color: rgb(40, 40, 40);
 }

@@ -26,27 +26,26 @@ const Clock = ({ time }) => {
   )
 }
 
-const Wristband = ({ color, countdown }) => {
+const Wristband = ({ color, countdown, size }) => {
   return (
     <div className={`row wristband ${color}`}>
-      <Color color={color}></Color>
-      <Countdown countdown={countdown}></Countdown>
+      <Color color={color} size={size}></Color>
+      <Countdown countdown={countdown} size={size}></Countdown>
     </div>
   )
 }
 
-const Color = ({ color }) => {
-
+const Color = ({ color, size }) => {
   return (
-    <div className={`left black_text color_name_font`}>
+    <div className={`left black_text color_name_font ${size}_font`}>
       <h2>{color.toUpperCase()}</h2>
     </div>
   )
 }
 
-const Countdown = ({ countdown }) => {
+const Countdown = ({ countdown, size }) => {
   return (
-    <div className={`right black_text header_font`}>
+    <div className={`right black_text header_font ${size}_font`}>
       <h1>{countdown}</h1>
     </div>
   )
@@ -143,8 +142,8 @@ const App = () => {
       <Wristband color={stack[0]} countdown={timeLeft(3)}></Wristband>
       <Wristband color={stack[1]} countdown={timeLeft(2)}></Wristband>
       <Wristband color={stack[2]} countdown={timeLeft(1)}></Wristband>
-      <Wristband color={stack[3]} countdown={timeLeft(0)}></Wristband>
-      <Wristband color={stack[4]} countdown="EXPIRED"></Wristband>
+      <Wristband color={stack[3]} countdown={timeLeft(0)} size="thick"></Wristband>
+      <Wristband color={stack[4]} countdown="EXPIRED" size="thin"></Wristband>
     </div>
   )
 }
