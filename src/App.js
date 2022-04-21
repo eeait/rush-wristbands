@@ -63,10 +63,10 @@ const Countdown = ({ countdown, color }) => {
 const App = () => {
   const localTime = () => {
     let t = new Date()
-    if (true) {
+    if (false) {
       let h = 0
-      let m = +18
-      let s = +20
+      let m = 0
+      let s = 0
       t.setHours(t.getHours()+h, t.getMinutes()+m, t.getSeconds()+s)
     }
     return t
