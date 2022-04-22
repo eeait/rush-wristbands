@@ -28,7 +28,7 @@ const Clock = ({ time }) => {
 
 const Wristband = ({ color, countdown, size }) => {
   return (
-    <div className={`row wristband ${color}`}>
+    <div className={`row wristband ${color} ${size}_margin`}>
       <Color color={color} size={size}></Color>
       <Countdown countdown={countdown} size={size}></Countdown>
     </div>
@@ -55,7 +55,7 @@ const App = () => {
   const localTime = () => {
     let t = new Date()
     if (false) {
-      let h = 3
+      let h = 0
       let m = 0
       let s = 0
       t.setHours(t.getHours()+h, t.getMinutes()+m, t.getSeconds()+s)
@@ -139,9 +139,9 @@ const App = () => {
   return (
     <div className="parent">
       <Firstrow heading="JUMP TIME LEFT" time={makeTimePretty(time)}/>
-      <Wristband color={stack[0]} countdown={timeLeft(3)}></Wristband>
-      <Wristband color={stack[1]} countdown={timeLeft(2)}></Wristband>
-      <Wristband color={stack[2]} countdown={timeLeft(1)}></Wristband>
+      <Wristband color={stack[0]} countdown={timeLeft(3)} size="normal"></Wristband>
+      <Wristband color={stack[1]} countdown={timeLeft(2)} size="normal"></Wristband>
+      <Wristband color={stack[2]} countdown={timeLeft(1)} size="normal"></Wristband>
       <Wristband color={stack[3]} countdown={timeLeft(0)} size="thick"></Wristband>
       <Wristband color={stack[4]} countdown="EXPIRED" size="thin"></Wristband>
     </div>

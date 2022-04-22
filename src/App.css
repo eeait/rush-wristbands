@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     /*border-color: aqua;
-    border-style: solid;*/
+    border-style: solid;*/;
 }
 
 .right {
@@ -55,10 +55,27 @@
     font-size: var(--thin_font);
 }
 
+.normal_margin {
+    margin-left: calc(3*var(--gap_unit));
+    margin-right: calc(3*var(--gap_unit));
+}
+
+/*.thick_margin {
+}*/
+
+.thin_margin {
+    margin-left: calc(6*var(--gap_unit));
+    margin-right: calc(6*var(--gap_unit));
+}
+
 .wristband {
     border-radius: calc(2*var(--gap_unit));
     background-color: rgb(255, 234, 2);
-    margin-left: 0vw;
+    box-shadow:
+        calc(0.5*var(--gap_unit))
+        calc(0.5*var(--gap_unit))
+        calc(0.5*var(--gap_unit))
+        black;
 }
 
 .green {
